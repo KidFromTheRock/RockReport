@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rock Report — Issue #001 | Kid From The Rock</title>
+<style>
+:root {
+  --black:#11110f; --gold:#b9902b; --gold-dark:#7f621c; --text:#20201e;
+  --muted:#6d665f; --line:#e7e1d5; --soft:#fbfaf7; --white:#ffffff;
+}
+* { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:#ffffff; }
+body { font-family: Georgia, 'Times New Roman', serif; color:var(--text); -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+.email-shell { max-width:680px; margin:0 auto; background:#fff; border-left:1px solid var(--line); border-right:1px solid var(--line); }
+.preheader { display:none!important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; overflow:hidden; }
+.top-rule { height:6px; background:var(--gold); }
+.header { padding:30px 42px 24px; border-bottom:1px solid var(--line); background:#fff; }
+.issue-line { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:18px; }
+.logo-row { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }
+.kftr-mark { line-height:.92; color:var(--black); letter-spacing:-1px; }
+.kftr-small { display:block; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:8px; }
+.kftr-main { display:block; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:42px; letter-spacing:1px; text-transform:uppercase; }
+.sponsor-top { text-align:right; min-width:210px; }
+.presented { font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.6px; text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
+.sponsor-top img { display:inline-block; max-width:215px; max-height:68px; width:auto; height:auto; }
+.intro { padding:36px 42px 24px; background:#fff; }
+.kicker { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.2px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:12px; font-weight:700; }
+h1 { font-family:Arial,Helvetica,sans-serif; font-size:34px; line-height:1.1; margin:0 0 14px; letter-spacing:-.5px; color:var(--black); }
+h2 { font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:1.22; margin:0 0 10px; color:var(--black); letter-spacing:-.2px; }
+h3 { font-family:Arial,Helvetica,sans-serif; font-size:18px; line-height:1.3; margin:0 0 8px; color:var(--black); }
+p { font-size:16px; line-height:1.65; margin:0 0 14px; }
+.lede { font-size:17px; line-height:1.72; color:#2a2a28; }
+.rundown { margin-top:24px; padding:18px 20px; background:var(--soft); border:1px solid var(--line); }
+.rundown-title { font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:1.8px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:10px; }
+.rundown ul { margin:0; padding:0; list-style:none; }
+.rundown li { font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.55; padding:7px 0; border-top:1px solid var(--line); }
+.rundown li:first-child { border-top:0; }
+.section { padding:30px 42px; border-top:1px solid var(--line); background:#fff; }
+.section-label { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.2px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:12px; }
+.story-card { padding:22px 0 6px; }
+.story-card:first-child { padding-top:0; }
+.story-eyebrow { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:10px; }
+.short-view { border-left:3px solid var(--gold); padding-left:16px; margin:14px 0 16px; }
+.short-view strong, .why strong { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold-dark); }
+.why { font-size:15px; line-height:1.6; color:var(--muted); margin-bottom:16px; }
+.cta { display:inline-block; background:var(--gold); color:#fff!important; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; padding:12px 16px; }
+.text-link { color:var(--gold-dark)!important; text-decoration:none; font-weight:bold; }
+.sponsor-card { border:1px solid var(--line); border-top:4px solid var(--gold); padding:24px 24px 22px; background:#fff; }
+.sponsor-lockup { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:18px; padding-bottom:16px; border-bottom:1px solid var(--line); }
+.sponsor-lockup img { display:block; max-width:220px; max-height:68px; width:auto; height:auto; }
+.sponsor-note { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:right; }
+.quick-list { margin:8px 0 0; padding:0; list-style:none; }
+.quick-list li { display:flex; gap:10px; font-size:15px; line-height:1.55; padding:11px 0; border-top:1px solid var(--line); }
+.quick-list li:first-child { border-top:0; }
+.dot { color:var(--gold-dark); font-weight:bold; }
+.footer { padding:28px 42px 34px; text-align:center; background:#fff; border-top:1px solid var(--line); }
+.footer-brand { font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:20px; letter-spacing:2px; text-transform:uppercase; color:var(--black); margin-bottom:8px; }
+.footer-pillar { font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:14px; }
+.footer-small { font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:1.6; color:var(--muted); }
+.footer-small a, .footer-small unsubscribe { color:var(--gold-dark)!important; text-decoration:none; font-weight:700; }
+.footer-manage { margin-top:14px; padding-top:14px; border-top:1px solid var(--line); }
+.article-shell { max-width:720px; margin:0 auto; padding:40px 24px 70px; }
+.article-top { border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:28px; }
+.article-brand { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.2px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:10px; }
+.article-body { max-width:620px; }
+.article-body p { font-size:18px; line-height:1.75; }
+.article-body ul { margin:0 0 22px; padding-left:20px; }
+.article-body li { font-size:17px; line-height:1.65; margin-bottom:10px; }
+.back-link { display:inline-block; margin-top:26px; font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:1.4px; text-transform:uppercase; color:var(--gold-dark)!important; text-decoration:none; font-weight:700; }
+.disclaimer { margin-top:18px; padding-top:14px; border-top:1px solid var(--line); font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:1.6; color:var(--muted); }
+.apply-cta-box { border:1px solid var(--line); border-top:4px solid var(--gold); background:var(--soft); padding:24px 24px 22px; text-align:left; }
+.apply-cta-label { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.2px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:10px; }
+.apply-cta-title { font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:1.22; margin:0 0 10px; color:var(--black); letter-spacing:-.2px; }
+.apply-cta-copy { font-size:16px; line-height:1.65; margin:0 0 18px; color:var(--text); }
+
+@media (max-width:600px) {
+  .email-shell { border-left:none; border-right:none; }
+  .header,.intro,.section,.footer { padding-left:24px; padding-right:24px; }
+  .logo-row,.sponsor-lockup { align-items:flex-start; flex-direction:column; }
+  .sponsor-top,.sponsor-note { text-align:left; }
+  .kftr-main { font-size:34px; }
+  h1 { font-size:30px; }
+  .sponsor-top img,.sponsor-lockup img { max-width:210px; }
+}
+</style>
+</head>
+<body>
+<div class="preheader">Welcome to The Rock Report — a weekly guide for Polynesian athletes and families navigating recruiting, NIL and the next level.</div>
+<div class="email-shell">
+  <div class="top-rule"></div>
+  <header class="header">
+    <div class="issue-line">Issue #001 · Introductory Issue · The Weekly Pacific Brief</div>
+    <div class="logo-row">
+      <div class="kftr-mark" aria-label="Kid From The Rock">
+        <span class="kftr-small">Kid From The</span>
+        <span class="kftr-main">Rock Report</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="kicker">Welcome Letter</div>
+    <h1>The Path Starts Here</h1>
+    <p class="lede">Welcome to the first issue of <strong>The Rock Report</strong>, the weekly newsletter from <strong>Kid From The Rock</strong>.</p>
+    <p>I’m Keiki Misipeka, founder of Kid From The Rock and former Director of Player Personnel &amp; NIL Engagement at the University of Miami. After years in college football, I launched this service to help student-athletes and their families better understand today’s recruiting landscape.</p>
+    <p>The transfer portal and NIL have changed the game. Families need trusted guidance, honest education and people who can help them ask the right questions before big decisions get made.</p>
+    <a href="https://chrischaneygg.github.io/KFTR/welcome.html" class="cta">Read Keiki’s Full Note →</a>
+
+    <div class="rundown">
+      <div class="rundown-title">The Rundown</div>
+      <ul>
+        <li><strong>Get Seen:</strong> recruiting exposure, profiles, film and opportunities.</li>
+        <li><strong>Build the Player:</strong> training, nutrition, eligibility and the college sports ecosystem.</li>
+        <li><strong>Money Game:</strong> NIL education and practical financial literacy for families.</li>
+        <li><strong>From the Rock:</strong> profiles, rankings, area-code spotlights and pipeline stories.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">What We’ll Cover</div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Get Seen</div>
+      <h2>Recruiting Starts With Visibility</h2>
+      <div class="short-view"><p><strong>The short view:</strong><br>Talent matters, but exposure matters too. We’ll help families understand how athletes can improve their recruiting profiles, build better film, find scholarship opportunities and get in front of the right people.</p></div>
+      <p class="why"><strong>Why it matters:</strong> More clarity means fewer wasted camps, fewer bad assumptions and a better chance for the right coaches to find the right kids.</p>
+      <a href="https://chrischaneygg.github.io/KFTR/get-seen.html" class="cta">Read More →</a>
+    </div>
+
+    <div class="story-card">
+      <div class="story-eyebrow">Build the Player</div>
+      <h2>College-Ready Means More Than Game-Ready</h2>
+      <div class="short-view"><p><strong>The short view:</strong><br>This section will cover development from every angle — training, nutrition, recovery, eligibility, NCAA rules, the recruiting calendar, the transfer portal and what families need to understand about the college sports ecosystem.</p></div>
+      <p class="why"><strong>Why it matters:</strong> The new 5-for-5 model and a faster roster marketplace make it even more important for families to understand the timeline early.</p>
+      <a href="https://chrischaneygg.github.io/KFTR/build-player.html" class="cta">Understand the Path →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story-eyebrow">Money Game</div>
+    <h2>Before the First NIL Check, Have the First Family Conversation</h2>
+    <p>NIL has created real opportunity, but it has also created real confusion. This section will focus on education: what NIL is, what it is not, what families should expect, and how athletes can think about money, brand value and long-term decisions the right way.</p>
+    <div class="short-view"><p><strong>The short view:</strong><br>Most athletes will not get big NIL money right away. But every family should understand the basics before money enters the conversation.</p></div>
+    <a href="https://chrischaneygg.github.io/KFTR/money-game.html" class="cta">Read the Money Game →</a>
+    <div class="disclaimer">This section is educational and should not be read as financial, legal or tax advice. Families should consult qualified professionals for advice specific to their situation.</div>
+  </section>
+
+  <section class="section">
+    <div class="story-eyebrow">From the Rock</div>
+    <h2>The Pipeline Is Real. We’re Here to Make It Easier to Follow.</h2>
+    <div class="short-view"><p><strong>The short view:</strong><br>We’ll celebrate athletes from American Samoa, players of Polynesian descent across the mainland, former players, coaches, families and the people carrying the culture forward.</p></div>
+    <p class="why"><strong>Why it matters:</strong> Visibility creates opportunity. When the pipeline is easier to see, the next player has a clearer path to follow.</p>
+    <a href="https://chrischaneygg.github.io/KFTR/from-the-rock.html" class="cta">Follow the Pipeline →</a>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Before You Go</div>
+    <ul class="quick-list">
+      <li><span class="dot">•</span><span><strong>For families:</strong> Start with the basics — current film, accurate measurables, academic info and a clear list of target schools.</span></li>
+      <li><span class="dot">•</span><span><strong>For athletes:</strong> Your recruiting profile is not a one-time upload. Treat it like a living resume.</span></li>
+      <li><span class="dot">•</span><span><strong>For the village:</strong> Send us athletes, coaches, families and stories worth spotlighting.</span></li>
+      <li><span class="dot">•</span><span><strong>Faith note:</strong> “Iron sharpens iron, and one man sharpens another.” — Proverbs 27:17</span></li>
+    </ul>
+  </section>
+
+
+  <section class="section">
+    <div class="apply-cta-box">
+      <div class="apply-cta-label">Players & Families</div>
+      <div class="apply-cta-title">Want to talk recruiting?</div>
+      <p class="apply-cta-copy">If you'd like to discuss our recruiting services, click below to fill out the athlete submission form. We’ll use it to learn more about the player, where they are in the process, and how Kid From The Rock may be able to help.</p>
+      <a href="https://kidfromtherock.com/apply" class="cta">Fill Out the Athlete Submission Form →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">Kid From The Rock</div>
+    <div class="footer-pillar">Tautua · Aiga · Aganu‘u</div>
+    <div class="footer-small">
+      Forward this to a coach, parent or athlete who needs to be in the village.<br>
+      <a href="https://kidfromtherock.com/apply" class="text-link">Players and families can fill out the athlete submission form here.</a>
+    </div>
+    <div class="footer-small footer-manage">
+      You’re receiving this because you signed up for The Rock Report or connected with Kid From The Rock.
+      If this isn’t for you, you can <unsubscribe>unsubscribe here</unsubscribe>.
+    </div>
+  </footer>
+</div>
+</body>
+</html>
