@@ -22,9 +22,9 @@ a { color:inherit; }
 .kftr-mark { line-height:.92; color:var(--black); letter-spacing:-1px; }
 .kftr-small { display:block; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:8px; }
 .kftr-main { display:block; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:42px; letter-spacing:1px; text-transform:uppercase; }
-.sponsor-top { text-align:right; min-width:210px; }
-.presented { font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.6px; text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
-.sponsor-top img { display:inline-block; max-width:215px; max-height:68px; width:auto; height:auto; }
+.sponsor-top { text-align:center; min-width:210px; }
+.presented { font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:1.6px; text-transform:uppercase; color:var(--muted); margin-bottom:7px; text-align:center; display:block; width:100%; }
+.sponsor-top img { display:block; max-width:215px; max-height:68px; width:auto; height:auto; margin:0 auto; }
 .intro { padding:36px 42px 24px; background:#fff; }
 .kicker { font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2.2px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:12px; font-weight:700; }
 h1 { font-family:Arial,Helvetica,sans-serif; font-size:34px; line-height:1.1; margin:0 0 14px; letter-spacing:-.5px; color:var(--black); }
@@ -74,12 +74,12 @@ p { font-size:16px; line-height:1.65; margin:0 0 14px; }
   .email-shell { border-left:none; border-right:none; }
   .header,.intro,.section,.footer { padding-left:24px; padding-right:24px; }
   .logo-row,.sponsor-lockup { align-items:flex-start; flex-direction:column; }
-  .sponsor-top,.sponsor-note { text-align:left; }
+  .sponsor-top,.sponsor-note { text-align:center; }
   .kftr-main { font-size:34px; }
   h1 { font-size:30px; }
   .sponsor-top img,.sponsor-lockup img { max-width:210px; }
 }
-.sponsor-link { display:inline-block; text-decoration:none; line-height:0; }
+.sponsor-link { display:block; text-decoration:none; line-height:0; text-align:center; margin:0 auto; }
 </style>
 </head>
 <body>
@@ -92,9 +92,9 @@ p { font-size:16px; line-height:1.65; margin:0 0 14px; }
         <span class="kftr-small">Kid From The</span>
         <span class="kftr-main">Rock Report</span>
       </div>
-      <div class="sponsor-top">
-        <div class="presented">Presented by</div>
-        <a href="https://www.raymondjames.com/theseilergroup" class="sponsor-link" target="_blank" rel="noopener"><img src="../../assets/seiler-group-raymond-james.jpg" alt="The Seiler Group of Raymond James"></a>
+      <div class="sponsor-top" style="text-align:center;">
+        <div class="presented" style="text-align:center; display:block; width:100%;">Presented by</div>
+        <a href="https://www.raymondjames.com/theseilergroup" class="sponsor-link" target="_blank" rel="noopener"><img src="../../assets/seiler-group-raymond-james.jpg" alt="The Seiler Group of Raymond James" style="display:block; margin:0 auto;"></a>
       </div>
     </div>
   </header>
@@ -137,7 +137,7 @@ p { font-size:16px; line-height:1.65; margin:0 0 14px; }
   <section class="section">
     <div class="sponsor-card">
       <div class="sponsor-lockup">
-        <a href="https://www.raymondjames.com/theseilergroup" class="sponsor-link" target="_blank" rel="noopener"><img src="../../assets/seiler-group-raymond-james.jpg" alt="The Seiler Group of Raymond James"></a>
+        <a href="https://www.raymondjames.com/theseilergroup" class="sponsor-link" target="_blank" rel="noopener"><img src="../../assets/seiler-group-raymond-james.jpg" alt="The Seiler Group of Raymond James" style="display:block; margin:0 auto;"></a>
         <div class="sponsor-note">Money Game Presented By</div>
       </div>
       <div class="story-eyebrow">Money Game</div>
